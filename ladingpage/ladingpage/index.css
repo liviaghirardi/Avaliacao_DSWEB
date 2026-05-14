@@ -1,0 +1,738 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* 1. CONFIGURAÇÕES BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F7FD; 
+    color: #1A1446; 
+    line-height: 1.6;
+}
+
+/* 2. CABEÇALHO */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 60px;
+    background-color: transparent;
+}
+
+.cabecalho .logo {
+    font-weight: 700;
+    font-size: 18px;
+    color: #5544E6; 
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 32px;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    color: #8C8C8C;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: #1A1446;
+}
+
+.header-icons {
+    display: flex;
+    gap: 16px;
+    color: #5544E6;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 3. SEÇÃO HOME (HERO)*/
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px 100px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 100px; 
+}
+
+.home-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.subtitle {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #A098AE;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.home-content h1 {
+    font-size: 64px; 
+    line-height: 1.1;
+    font-weight: 700;
+    color: #1A1446;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.home-content h1 span {
+    color: #5544E6; 
+}
+
+.home-content p {
+    color: #6B6B7B;
+    font-size: 16px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.home-buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.btn-primary {
+    background-color: #5544E6; 
+    color: white;
+    padding: 16px 32px;
+    border-radius: 30px; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1A1446;
+}
+
+.btn-secondary {
+    color: #5544E6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.home-image {
+    flex: 1.2; 
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+/* Imagem principal (Fundo escuro) */
+.home-image > img:not(.img-flutuante) {
+    width: 100%;
+    max-width: 650px; 
+    border-radius: 40px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    object-fit: cover;
+}
+
+/* Imagem flutuante (Vaso) */
+.home-image .img-flutuante {
+    position: absolute;
+    bottom: -40px;  
+    left: -100px;  
+    width: 240px;   
+    height: 300px;  
+    max-width: none; 
+    object-fit: cover;
+    border-radius: 20px;
+    border: 12px solid #F8F7FD; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12); 
+    z-index: 10; 
+}
+/* 4. SEÇÃO FILOSOFIA (THE ATELIER STANDARD) */
+.philosophy {
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.philosophy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.philosophy-header h2 {
+    font-size: 40px;
+    color: #1A1446;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-top: 8px;
+}
+
+.philosophy-header p {
+    color: #6B6B7B;
+    font-size: 16px;
+    max-width: 400px;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 32px; 
+}
+
+
+.card {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Caixinha do ícone */
+.icon-box {
+    width: 56px;
+    height: 56px;
+    background-color: #F0EEFF; 
+    color: #5544E6; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.card h3 {
+    font-size: 22px;
+    color: #1A1446;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #6B6B7B;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* 5. SEÇÃO PRODUTOS (FEATURED DROPS)*/
+.products {
+    padding: 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.products-header h2 {
+    font-size: 32px;
+    color: #1A1446;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #5544E6;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.view-all:hover {
+    color: #1A1446;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 24px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05); 
+}
+
+.product-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+    margin-bottom: 16px;
+    aspect-ratio: 4/5; 
+    background-color: #E8E6F1; 
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tag-limited {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #FFFFFF;
+    color: #1A1446;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    z-index: 2; 
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-info h4 {
+    font-size: 16px;
+    color: #1A1446;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: #8C8C8C;
+}
+
+.product-info .price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1446;
+}
+
+/*6. SEÇÃO FEEDBACKS (TESTIMONIALS)*/
+
+.feedbacks {
+    padding: 80px 60px;
+    background-color: #F8F7FD; 
+}
+
+.feedbacks-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #0D0829; 
+    border-radius: 40px; 
+    padding: 80px; 
+}
+
+.feedbacks h2 {
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 48px;
+    text-align: left; 
+    font-weight: 700;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px; 
+}
+
+.testimonial-card {
+    background-color: transparent; 
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-icon {
+    font-size: 56px;
+    color: #FF55A5; 
+    font-family: Georgia, serif; 
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.testimonial-card p {
+    font-size: 18px;
+    color: #E0DFE9; 
+    line-height: 1.6;
+    margin-bottom: 40px;
+    font-style: italic; 
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: auto;
+}
+
+.author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.author strong {
+    display: block;
+    color: #FFFFFF; 
+    font-size: 15px;
+}
+
+.author span {
+    color: #A098AE; 
+    font-size: 12px;
+}
+/*7. SEÇÃO NEWSLETTER (EXCLUSIVES)*/
+.exclusives {
+    padding: 100px 60px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.exclusives .subtitle {
+    color: #5544E6; /* Deixa o subtítulo roxo como na imagem */
+}
+
+.exclusives h2 {
+    font-size: 40px;
+    color: #1A1446;
+    margin-bottom: 16px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.exclusives p {
+    color: #6B6B7B;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+/* Estrutura do Formulário "Pílula" */
+.subscribe-form {
+    display: flex;
+    background-color: #F0EEFF; 
+    border-radius: 40px;
+    padding: 8px; 
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 16px 24px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    color: #1A1446;
+}
+
+.subscribe-form button {
+    background-color: #5544E6;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #1A1446;
+}
+
+/*8. RODAPÉ (FOOTER)*/
+.rodape {
+    background-color: #0D0829; 
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logo-footer {
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+}
+
+.footer-left p {
+    color: #8C8C8C;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap; 
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #8C8C8C;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFFFFF;
+}
+
+/*9. RESPONSIVIDADE (MOBILE & TABLET)*/
+.menu-mobile-icon {
+    display: none;
+    font-size: 20px;
+    color: #5544E6;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    /*Tablets */
+    .home {
+        flex-direction: column;
+        padding: 40px;
+        gap: 60px;
+    }
+    .home-content, .home-image {
+        max-width: 100%;
+        text-align: center;
+    }
+    .home-buttons {
+        justify-content: center;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .philosophy-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile (Celulares) */
+    
+    .cabecalho { padding: 20px 24px; }
+    .home, .philosophy, .products, .feedbacks, .exclusives { 
+        padding: 40px 24px; 
+    }
+
+    /* Cabeçalho */
+    .menu-navegacao {
+        display: none; 
+    }
+    .menu-mobile-icon {
+        display: block; 
+    }
+    .user-icon {
+        display: none; 
+    }
+    .cabecalho {
+        justify-content: space-between;
+    }
+
+    .cabecalho .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+    .home-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 16px;
+        box-sizing: border-box;
+        border: 1px solid #E8E6F1; 
+        border-radius: 30px;
+    }
+    .home-image .img-flutuante {
+        left: -10px;
+        bottom: -20px;
+        width: 160px;
+        height: 200px;
+        border-width: 6px;
+    }
+
+    .card-container, .product-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .products-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .feedbacks {
+        padding: 40px 16px;
+    }
+    .feedbacks-container {
+        padding: 40px 24px;
+        border-radius: 24px;
+    }
+    .feedbacks h2 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    .exclusives h2 {
+        font-size: 32px;
+    }
+    .subscribe-form {
+        flex-direction: column;
+        background-color: transparent;
+        padding: 0;
+        gap: 12px;
+    }
+    .subscribe-form input {
+        background-color: #F0EEFF;
+        border-radius: 30px;
+        padding: 16px 24px;
+        width: 100%;
+    }
+    .subscribe-form button {
+        width: 100%;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 24px;
+        gap: 32px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* 10.RODAPÉ E BOTÃO QUICK SHOP */
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 16px;
+    color: #8A78F7; /* Cor roxa/lilás dos ícones sociais */
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.footer-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Linha bem clarinha e transparente */
+    margin-bottom: 32px;
+}
+
+.btn-quick-shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #8A78F7; 
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 350px; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-quick-shop:hover {
+    background-color: #6C5AE0;
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .btn-quick-shop {
+        max-width: 100%;
+    }
+}
